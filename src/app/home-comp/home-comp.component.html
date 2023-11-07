@@ -1,0 +1,35 @@
+
+
+<h1 class="text-center" ><u>ARTWORKS</u></h1>
+<hr style="background-color: olive;">
+<div class="main container-fluid d-flex flex-direction-column flex-wrap m-auto" >
+    <div *ngFor="let item of artData" class="card" style="width: 14rem;margin-left :2vh">
+        <img class="card-img-top" src="https://www.artic.edu/iiif/2/{{
+            item.image_id
+          }}/full/100,/0/default.jpg" alt="Card image cap" width="24vh" height="200vh"> 
+        
+        <div class="card-body">
+          <h3 class="card-title" >{{item.title}}</h3>
+        
+          <br>
+
+          <p class="card-text">Artist Name: {{item.artist_title}}</p>
+          <p class="card-text">Origin: {{item.place_of_origin}}</p>
+          <br>          
+          <a  class="btn btn-warning" style="position:absolute;bottom:0;left:8px;" (click)="toDetails(item.id)">View More</a>
+          <a class="btn btn-danger" style="position: absolute;bottom: 0;right:8px;border-radius: 100%;" (click)="toFav(item.id)"><i class="fa-regular fa-heart"></i></a>
+          
+        </div>
+  
+        
+
+          
+     
+    
+
+</div>
+<div class="d-flex justify-content-center" style="position:relative;bottom:0;">
+    <mat-paginator class="mat-paginator-sticky pagination" [pageSizeOptions]="[5, 10, 20]" [pageIndex]="pageIndex-1"
+        pageSize="20" aria-label="Select page of periodic elements" [length]="pageTotal" (page)="PageAmount($event)">
+    </mat-paginator>
+</div>

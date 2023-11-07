@@ -1,0 +1,28 @@
+<div class="content">
+    <div class="container">
+        <div class="row">
+
+            <img src="https://www.artic.edu/iiif/2/{{
+            artDetail?.image_id
+          }}/full/350,/0/default.jpg" class="rounded mx-auto d-block" alt="art" class="art"
+                style="width:50%;height:80vh;border:2px solid black" />
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col">
+            <div class="row">
+                <label> Artwork Title:{{ artDetail?.title }}</label>
+                <label> Artist Title:{{ artDetail?.artist_title }}</label>
+                <label>Place Of Origin: {{ artDetail?.place_of_origin }}</label>
+                <p class="description">
+                    Art Description: {{ artDetail?.thumbnail?.alt_text }}
+                </p>
+                <p class="History">
+                    Exhibition History: {{ artDetail?.publication_history }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
