@@ -21,10 +21,10 @@ export class GridViewComponent {
     this.str=this.showResults.getRawValue().search;
     this.getArtworks(this.str);
     console.log(this.str);
-    let p=document.createElement('h2');
-    p.innerHTML="Top 10 results:-"
-    let main=document.getElementById('min');
-    main?.appendChild(p);
+    // let p=document.createElement('h2');
+    // p.innerHTML="Top 10 results:-"
+    // let main=document.getElementById('min');
+    // main?.appendChild(p);
   }
   str:any;
   ngOnInit() {

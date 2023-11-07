@@ -1,9 +1,9 @@
 
 
 <h1 class="text-center" ><u>ARTWORKS</u></h1>
-<hr style="background-color: olive;">
+<hr style="background-color: rgb(128, 0, 60);">
 <div class="main container-fluid d-flex flex-direction-column flex-wrap m-auto" >
-    <div *ngFor="let item of artData" class="card" style="width: 14rem;margin-left :2vh">
+    <div *ngFor="let item of artData" class="card" style="width: 14rem;margin-left :3vh">
         <img class="card-img-top" src="https://www.artic.edu/iiif/2/{{
             item.image_id
           }}/full/100,/0/default.jpg" alt="Card image cap" width="24vh" height="200vh"> 
@@ -16,7 +16,7 @@
           <p class="card-text">Artist Name: {{item.artist_title}}</p>
           <p class="card-text">Origin: {{item.place_of_origin}}</p>
           <br>          
-          <a  class="btn btn-warning" style="position:absolute;bottom:0;left:8px;" (click)="toDetails(item.id)">View More</a>
+          <a  class="btn btn-primary" style="position:absolute;bottom:0;left:8px;" (click)="toDetails(item.id)">Info</a>
           <a class="btn btn-danger" style="position: absolute;bottom: 0;right:8px;border-radius: 100%;" (click)="toFav(item.id)"><i class="fa-regular fa-heart"></i></a>
           
         </div>
